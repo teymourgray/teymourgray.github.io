@@ -4,9 +4,9 @@
   --text: #202a35;
   --muted: #66717c;
   --link: #315b83;
-  --border: #d9dedf;
-  --background: #f7f6f2;
-  --accent-light: #e9eef2;
+  --border: #d9d2b8;
+  --background: #fbf4d5;
+  --accent-light: #f1e7bd;
 }
 
 * {
@@ -18,12 +18,12 @@ html {
 }
 
 body {
-  max-width: 860px;
+  max-width: 920px;
   margin: 0 auto;
   padding: 0 32px;
   background: var(--background);
   color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.75;
 }
@@ -31,12 +31,13 @@ body {
 /* A distinct, vertically organized masthead */
 .site-header {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
   padding: 38px 0 24px;
   margin-bottom: 52px;
-  border-bottom: 2px solid var(--text);
+  border-bottom: 1px solid var(--border);
 }
 
 .site-header .name {
@@ -51,12 +52,14 @@ body {
 .site-header nav {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
   gap: 10px 22px;
 }
 
 .site-header nav a {
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   text-decoration: none;
   transition: color 150ms ease;
 }
@@ -80,8 +83,8 @@ body {
 .label h1 {
   display: inline-block;
   margin: 0;
-  padding-bottom: 5px;
-  border-bottom: 3px solid var(--link);
+  padding-bottom: 0;
+  border-bottom: none;
   font-size: 1.45rem;
   font-weight: 700;
   letter-spacing: -0.035em;
@@ -97,12 +100,24 @@ body {
 }
 
 .body ul {
-  padding-left: 1.4rem;
+  padding-left: 1.25rem;
+  margin: 0 0 20px;
 }
 
 .body li {
-  padding-left: 4px;
-  margin-bottom: 5px;
+  padding-left: 3px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.body li a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.body li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 a {
@@ -131,6 +146,9 @@ a:hover {
   .site-header {
     padding-top: 28px;
     margin-bottom: 36px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
   }
 
   .site-header nav {
