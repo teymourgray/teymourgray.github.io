@@ -99,35 +99,41 @@ body {
   margin: 0 0 18px;
 }
 
-.body ul {
-  padding-left: 1.25rem;
+<!-- old-->
+.entries {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.entries li {
   margin: 0 0 20px;
 }
 
-.body li {
-  padding-left: 3px;
-  margin-bottom: 8px;
+.entries .title {
+  display: block;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.entries .meta {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
   line-height: 1.6;
 }
 
-.body li a {
-  color: var(--link);
-  text-decoration: none;
+.entries .links {
+  margin-left: 6px;
 }
 
-.body li a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-a {
+.entries a {
   color: var(--link);
   text-underline-offset: 3px;
 }
 
-a:hover {
-  text-decoration-thickness: 2px;
-}
+<!-- old-->
+
 
 /* Contact information as a quiet closing element */
 .site-footer {
